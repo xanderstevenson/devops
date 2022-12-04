@@ -1,5 +1,17 @@
 name: Create MP3 from TXT on Push to a certain directory
 on:
+  workflow_call:
+    inputs:
+      image_name:
+        required: true
+        type: string
+      tag: 
+        type: string
+    secrets:
+      registry_username:
+        required: true
+      registry_password:
+        required: true
   push:
     # only runs when files in this path are changed, and they must end in .txt
     paths:
