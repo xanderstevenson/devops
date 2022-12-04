@@ -9,9 +9,9 @@ on:
         type: string
     secrets:
       registry_username:
-        required: true
+        required: false
       registry_password:
-        required: true
+        required: false
   push:
     # only runs when files in this path are changed, and they must end in .txt
     paths:
